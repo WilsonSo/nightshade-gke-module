@@ -19,7 +19,7 @@ resource "google_container_node_pool" "custom_nodepool" {
   }
 
   node_config {
-    machine_type    = lookup(each.value, "machine_type", "f1-micro")
+    machine_type    = lookup(each.value, "machine_type", "e2-micro")
     disk_size_gb    = lookup(each.value, "disk_size_gb", 10)
     disk_type       = lookup(each.value, "disk_type", "pd-standard")
     image_type      = lookup(each.value, "image_type", "COS")
